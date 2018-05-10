@@ -49,4 +49,26 @@ namespace AdvancedPipeline
         /// <exception cref="InvalidOperationException">The current pipeline is busy.</exception>
         void Reset();
     }
+
+    /// <summary>
+    ///     Represents a sequence of filters which can be executed in sequence.
+    /// </summary>
+    /// <typeparam name="TInput">The input type of the pipeline.</typeparam>
+    /// <typeparam name="TOutput">The output type of the pipeline.</typeparam>
+    public interface IPipeline<in TInput, out TOutput> : IPipeline
+    {
+        /// <summary>
+        ///     Gets the output of the last execution of the current pipeline.
+        /// </summary>
+        /// <exception cref="InvalidOperationException">The last execution resulted in an error.</exception>
+        new TOutput Output { get; }
+
+        /// <summary>
+        ///     Executes the current pipeline with the specified input.
+        /// </summary>
+        /// <param name="input">The input to execute in the current pipeline.</param>
+        /// <returns><c>true</c> if the execution was successful; otherwise, <c>false</c>.</returns>
+        /// <exception cref="InvalidOperationException">The current pipeline is busy.</exception>
+        Boolean Execute(TInput input);
+    }
 }
