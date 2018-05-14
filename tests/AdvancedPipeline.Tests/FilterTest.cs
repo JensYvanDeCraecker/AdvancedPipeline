@@ -19,7 +19,7 @@ namespace AdvancedPipeline.Tests
         [AssertionMethod]
         public void ExecuteStructNullArgumentNullExceptionTest()
         {
-            Assert.Throws<ArgumentNullException>(() => new ConcreteFilter<Int32>().Execute(null));
+            Assert.Throws<ArgumentNullException>(() => ((IFilter)new ConcreteFilter<Int32>()).Execute(null));
         }
 
         [Fact]
@@ -47,14 +47,14 @@ namespace AdvancedPipeline.Tests
         [AssertionMethod]
         public void ExecuteClassDifferentTypeArgumentExceptionTest()
         {
-            Assert.Throws<ArgumentException>(() => new ConcreteFilter<String>().Execute(new List<Char>()));
+            Assert.Throws<ArgumentException>(() => ((IFilter)new ConcreteFilter<String>()).Execute(new List<Char>()));
         }
 
         [Fact]
         [AssertionMethod]
         public void ExecuteStructDifferentTypeArgumentExceptionTest()
         {
-            Assert.Throws<ArgumentException>(() => new ConcreteFilter<Int32>().Execute(true));
+            Assert.Throws<ArgumentException>(() => ((IFilter)new ConcreteFilter<Int32>()).Execute(true));
         }
     }
 }
