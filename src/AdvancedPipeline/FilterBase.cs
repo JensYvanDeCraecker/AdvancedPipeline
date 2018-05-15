@@ -7,7 +7,7 @@ namespace AdvancedPipeline
     /// </summary>
     /// <typeparam name="TInput">The input type of the filter.</typeparam>
     /// <typeparam name="TOutput">The output type of the filter.</typeparam>
-    public abstract class Filter<TInput, TOutput> : IFilter<TInput, TOutput>
+    public abstract class FilterBase<TInput, TOutput> : IFilter<TInput, TOutput>
     {
         /// <summary>
         ///     Executes the current filter with the specified input.

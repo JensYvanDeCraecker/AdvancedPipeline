@@ -5,9 +5,9 @@ using Xunit;
 
 namespace AdvancedPipeline.Tests
 {
-    public class FilterTest
+    public class FilterBaseTest
     {
-        private class ConcreteFilter<T> : Filter<T,T>
+        private class ConcreteFilter<T> : FilterBase<T,T>
         {
             public override T Execute(T input)
             {
