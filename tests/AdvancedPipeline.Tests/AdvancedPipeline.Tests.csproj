@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="FilterBaseTest.cs" />
     <Compile Include="PipelineBaseTest.cs" />
+    <Compile Include="PipelineTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
