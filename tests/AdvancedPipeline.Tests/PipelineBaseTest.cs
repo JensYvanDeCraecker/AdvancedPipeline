@@ -84,7 +84,7 @@ namespace AdvancedPipeline.Tests
 
         [Fact]
         [AssertionMethod]
-        public void NewPipelineInstanceTest()
+        public void NewPipelineBaseInstanceTest()
         {
             ConcretePipeline pipeline = new ConcretePipeline();
             Assert.Equal(PipelineState.None, pipeline.State);
