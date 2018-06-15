@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AdvancedPipeline
+namespace AdvancedPipeline.Core
 {
     /// <summary>
     ///     Represents an abstract filter that provides basic validation.

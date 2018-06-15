@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using AdvancedPipeline.Core;
 using JetBrains.Annotations;
 using Xunit;
 

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdvancedPipeline
+namespace AdvancedPipeline.Core
 {
     /// <summary>
     ///     Represents a base pipeline that provides the most functionalities out of the box.
